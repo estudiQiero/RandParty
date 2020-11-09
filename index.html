@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Randomize!</title>
+		<link href="estils.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo&display=swap">
+	</head>
+	<body>
+		<div class="fondo"></div>
+		<div class="contenidor">
+			<div data-pg-name="Llistat Alumnes" class="alumnesLlistat">
+				<ol id="llistaAlumnes">
+					<li>Guim</li>
+					<li>Gustavo</li>
+					<li>Evelyn</li>
+					<li>Aroa</li>
+					<li>Tatiana</li>
+					<li>Julia</li>
+					<li>Curial</li>
+					<li>Ariadna</li>
+				</ol>
+			</div>
+			<div data-pg-name="Random!">
+				<input id="botonRandom" type="button" onclick="random()" value="Random!">
+			</div>
+			<div class="contOpAlumnes">
+				<div id="caixaInfo">
+					<div class="text-close" id="text-close" onclick="tancarCaixa()">
+						<img src="images/tancaFinestra.svg">
+					</div>
+					<h4 id="textInfo">Aquest nom no existeix</h4>
+					<p id="subTextInfo">Revisa be el nom, i escriu les inicials amb majúscules</p>
+				</div>
+				<input type="text" placeholder="Nom del Alumne" id="nomAlumne"/>
+				<div class="cont-botons">
+					<input type="button" onclick="afegir()" value="Afegir" id="botoAfegir"/>
+					<input type="button" onclick="esborrar()" value="Esborrar" id="botoEsborrar"/>
+				</div>
+			</div>
+			<div class="contFirma">
+				<p class="firma">Fet amb</p>
+				<div class="heart"></div>
+				<p class="firma">per Miq. <span id="data">2019.</span></p>
+			</div>
+		</div>
+		<!-- <input type="text" id="numero"/> -->
+		<!-- <p>introdueix nº d'alumnes per grup (de 1 a 4)</p> -->
+		<script src="js/script.js" type="text/javascript"></script>
+	</body>
+</html>

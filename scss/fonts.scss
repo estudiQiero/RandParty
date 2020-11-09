@@ -1,0 +1,48 @@
+// @font-face
+// Sistema tipogràfic
+// Bases CSS
+// 
+// @font-face
+@font-face {
+    // 
+    // CRETE ROUND
+    font-family: 'Crete Round';
+    src: url(fonts/CreteRound-Regular.ttf) format('truetype');
+    font-weight: 300;
+
+    // 
+    // UBUNTU
+    font-family: 'Ubuntu-Light';
+    src: url(fonts/Ubuntu-Light.ttf) format('truetype');
+    font-weight: 300;
+    font-family: 'Ubuntu-Lightitalic';
+    src: url(fonts/Ubuntu-Lightitalic.ttf) format('truetype');
+    font-weight: 300;
+    font-family: 'Ubuntu-Regular';
+    src: url(fonts/Ubuntu-Regular.ttf) format('truetype');
+    font-weight: 500;
+    font-family: 'Ubuntu-Bold';
+    src: url(fonts/Ubuntu-Bold.ttf) format('truetype');
+    font-weight: 700;
+}
+
+// 
+// Sistema tipogràfic
+// https://medium.com/codyhouse/create-your-design-system-part-1-typography-7c630d9092bd
+/* Tipografías */
+$tipo-principal: 'Crete Round',
+serif;
+$tipo-secundaria: 'Ubuntu',
+serif;
+
+h1,
+h2,
+h3 {
+    font: {
+        family: $tipo-principal;
+        size: 2em;
+    };
+
+    color: $blanc;
+}
+

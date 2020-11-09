@@ -1,0 +1,35 @@
+/* colors base del tema */
+
+// Bases
+$blanc: #fff;
+$blau: #3e88b3; //#2fa0cf;
+$crema: #fcca88;
+$gris-lite: #f4f4f4;
+$gris-clar: #c7c7c7;
+$gris: #7d7d7d;
+$gris-fosc: #3f3f3f;
+$negre: #000;
+$blau-cel: #8ccff5;
+$blau-lite: #b3e4ff;
+$marro: #c27d25;
+$taronja: #f39200;
+
+$cor: #ed871a; //#b81530;
+//
+// Variacions
+@function tint($color, $porcentaje) {
+    @return mix($blanc, $color, $porcentaje);
+}
+//
+// Genèrics
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+li {
+    color: $blanc;
+}
+

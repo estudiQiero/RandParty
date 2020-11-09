@@ -1,0 +1,341 @@
+body {
+    position: relative;
+
+    // background: rgb(140, 193, 217);
+    // background: linear-gradient(0deg, rgba(140, 193, 217, 1) 0%, rgba(138, 113, 245, 1) 100%);
+    background: linear-gradient(152deg, #0ab488, #e177ec);
+    background-size: 400% 400%;
+    -webkit-animation: AnimationName 7s ease infinite;
+    -moz-animation: AnimationName 7s ease infinite;
+    animation: AnimationName 7s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 46% 0%
+    }
+
+    50% {
+        background-position: 55% 100%
+    }
+
+    100% {
+        background-position: 46% 0%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 46% 0%
+    }
+
+    50% {
+        background-position: 55% 100%
+    }
+
+    100% {
+        background-position: 46% 0%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 46% 0%
+    }
+
+    50% {
+        background-position: 55% 100%
+    }
+
+    100% {
+        background-position: 46% 0%
+    }
+}
+
+.fondo {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    opacity: 0.1;
+    background-image: radial-gradient(circle at center center, #d7a6fb, #ffffff), repeating-radial-gradient(circle at center center, #d7a6fb, #d7a6fb, 8px, transparent 16px, transparent 8px);
+    background-blend-mode: multiply;
+}
+
+.contenidor {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .alumnesLlistat {
+        max-width: 320px;
+        padding-top: 2em;
+
+        ol {
+            counter-reset: contador;
+            list-style: none;
+            font-family: 'Arvo', serif;
+            padding-left: 0;
+
+            li {
+                position: relative;
+                width: 180px;
+                margin: 0.6em;
+                counter-increment: contador;
+                font-size: 1.2em;
+                line-height: 1.5em;
+                transition: all .25s ease;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                cursor: move;
+
+                &.over {
+                    border: 3px dotted #666;
+                }
+
+                &:hover {
+                    transform: scale(1.5);
+                }
+
+                &::before {
+                    content: counter(contador);
+                    background-color: orange;
+                    text-align: center;
+                    border-radius: 50px;
+                    padding: 8px;
+                    display: flex;
+                    width: 20px;
+                    height: 20px;
+                    margin-right: .5em;
+                    margin-top: 0;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                // &::after {
+                // content: "-";
+                // position: absolute;
+                // width: 20px;
+                // height: 20px;
+                // color: brown;
+                // right: 0;
+                // margin-left: 6em;
+                // transition: all .25ms ease-in-out;
+                // }
+            }
+        }
+    }
+
+    .cont-botons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between
+    }
+
+    #caixaInfo {
+        height: auto;
+        font-family: 'Arvo', serif;
+        text-align: center;
+        color: $blanc;
+        position: absolute;
+        top: 0;
+        background: #0071bc;
+        border-radius: 14px;
+        border: 2px solid #ffffff;
+        visibility: collapse;
+        padding: 1.4em;
+        transition: all .25s ease-in-out;
+        z-index: 9999;
+
+        #textInfo {
+            padding: 0;
+            font-size: 1.2em;
+        }
+
+        #subTextInfo {
+            margin-top: 18px;
+            font-size: 0.9em;
+            line-height: 1.5em;
+        }
+
+        #text-close {
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            background: #bc0050;
+            border: 2px solid #ffffff;
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            cursor: pointer;
+
+            img {
+                height: 14px;
+                width: 14px;
+            }
+
+            // transition: all .25s ease-in-out;
+            // &:hover {
+            // transform: scale(1.2);
+            // }
+        }
+    }
+
+    input[type=text] {
+        font-family: 'Arvo', serif;
+        width: 230px;
+        height: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 0;
+        margin: 10px;
+        text-align: center;
+        font-size: 1.2em;
+        outline: none !important;
+
+        &::placeholder {
+            font-size: .8em;
+            color: rgb(206, 206, 206);
+        }
+    }
+
+    input[type=button] {
+        width: 120px;
+        font-family: 'Arvo', serif;
+        background-color: #0071bc;
+        border: 2px solid #fff;
+        font-size: .8em;
+        color: $blanc;
+        padding: 16px 24px;
+        text-decoration: none;
+        margin: 6px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all .2s ease;
+        outline: none !important;
+        -webkit-appearance: none;
+        -webkit-user-select: none;
+
+        &#botonRandom {
+            margin: 2em 0;
+            height: 80px;
+            background-color: #8754bc;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -webkit-appearance: none;
+            -webkit-user-select: none;
+            font-size: 1em;
+            transform: scale(1);
+            transition: all .25s ease;
+
+            &:hover {
+                transform: scale(1.5);
+            }
+        }
+
+        &#botoAfegir {
+            -webkit-user-select: none;
+            transition: all .25s ease;
+            height: 54px;
+
+            &:hover {
+                background-color: yellowgreen;
+            }
+        }
+
+        &#botoEsborrar {
+            -webkit-user-select: none;
+            transition: all .25s ease;
+            height: 54px;
+
+            &:hover {
+                background-color: brown;
+            }
+        }
+    }
+}
+
+.contFirma {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    margin-top: 2em;
+    padding-right: 1.3em;
+    margin-bottom: 1em;
+
+    // ojo, hay qmover el left de .heart
+    .firma {
+        font-family: sans-serif;
+        font-size: .6em;
+        font-weight: 100;
+        text-align: center;
+        color: $blanc;
+        margin: 0 -2px 0 29px;
+    }
+
+    .heart {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: -1em;
+
+        // Ojo, hay q mover el right de .contFirma
+        background-color: $cor;
+        height: 10px;
+        width: 10px;
+        transform: rotate(-45deg);
+        animation-name: beat;
+        animation-duration: 1s;
+        animation-Iteration-count: infinite;
+
+        &::after {
+            background-color: $cor;
+            content: "";
+            border-radius: 50%;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: 0px;
+
+            // posiciona el circulo izquierdo
+            left: 5px;
+
+            // posiciona el circulo izquierdo
+        }
+
+        &::before {
+            content: "";
+            background-color: $cor;
+            border-radius: 50%;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: -5px;
+
+            // posiciona el circulo derecho
+            left: 0px;
+
+            // posiciona el circulo derecho
+        }
+    }
+
+    @keyframes beat {
+        0% {
+            transform: scale(1) rotate(-45deg);
+        }
+
+        50% {
+            transform: scale(0.6) rotate(-45deg);
+        }
+    }
+}
